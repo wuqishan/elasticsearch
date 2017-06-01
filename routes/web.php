@@ -11,6 +11,17 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+// Route::get('/', function () {
+//     return view('welcome');
+// });
+
+
+Route::get('/', 'TaxController@index');
+Route::get('get', 'TaxController@get');
+Route::get('get100', 'TaxController@get100');
+
+
+// 向es增加数据
+Route::get('store', 'EsController@store');
+Route::get('get/{id}', 'EsController@get');
+Route::get('indices', 'EsController@indices');
